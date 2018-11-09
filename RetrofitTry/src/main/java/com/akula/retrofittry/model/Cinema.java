@@ -1,15 +1,11 @@
 package com.akula.retrofittry.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movie{
+public class Cinema {
 
 
     @SerializedName("poster_path")
@@ -42,7 +38,7 @@ public class Movie{
     private Double voteAverage;
 
 
-    public Movie (String posterPath, boolean adult, String overview, String releaseDate, List<Integer> genreIds, Integer id,
+    public Cinema(String posterPath, boolean adult, String overview, String releaseDate, List<Integer> genreIds, Integer id,
                   String originalTitle, String originalLanguage, String title, String backdropPath, Double popularity,
                   Integer voteCount, Boolean video, Double voteAverage){
         this.posterPath = posterPath;

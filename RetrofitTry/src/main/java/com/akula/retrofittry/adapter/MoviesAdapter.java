@@ -10,18 +10,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.akula.retrofittry.R;
-import com.akula.retrofittry.model.Movie;
+import com.akula.retrofittry.model.Cinema;
 
 import java.util.List;
 
 public class MoviesAdapter  extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>{
 
-    private List<Movie> movies;
+    private List<Cinema> cinemas;
     private int rowLayout;
     private Context context;
 
-    public MoviesAdapter(List<Movie> movies, int rowLayout, Context context) {
-        this.movies = movies;
+    public MoviesAdapter(List<Cinema> cinemas, int rowLayout, Context context) {
+        this.cinemas = cinemas;
         this.rowLayout = rowLayout;
         this.context = context;
     }
@@ -36,16 +36,16 @@ public class MoviesAdapter  extends RecyclerView.Adapter<MoviesAdapter.MovieView
     @Override
     public void onBindViewHolder(@NonNull MoviesAdapter.MovieViewHolder holder, int position) {
 
-        holder.movieTitle.setText(movies.get(position).getTitle());
-        holder.data.setText(movies.get(position).getReleaseDate());
-        holder.movieDescription.setText(movies.get(position).getOverview());
-        holder.rating.setText(movies.get(position).getVoteAverage().toString());
+        holder.movieTitle.setText(cinemas.get(position).getTitle());
+        holder.data.setText(cinemas.get(position).getReleaseDate());
+        holder.movieDescription.setText(cinemas.get(position).getOverview());
+        holder.rating.setText(cinemas.get(position).getVoteAverage().toString());
 
     }
 
     @Override
     public int getItemCount() {
-        return movies==null ? 0:movies.size();
+        return cinemas ==null ? 0: cinemas.size();
     }
 
 
